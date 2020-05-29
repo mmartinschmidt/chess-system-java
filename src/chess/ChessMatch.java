@@ -45,6 +45,10 @@ public class ChessMatch {
 			//throw new ChessException("There is no piece on souce position");
 			throw new ChessException("Nao ha nenhuma peca na posicao de origem");		
 		}
+		if (!board.piece(position).isThereAnyPossibleMove()) {
+			//throw new ChessException("The is no possible moves for the chose piece");
+			throw new ChessException("Nao ha movimentos possiveis para a peca escolhida");
+		}
 	}
 	
 	private void placeNewPiece(char column, int row, ChessPiece piece) {
