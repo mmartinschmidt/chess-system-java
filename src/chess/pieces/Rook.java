@@ -20,7 +20,6 @@ public class Rook extends ChessPiece{
 	public boolean[][] possibleMoves() {
 		boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
 		
-		
 		Position p = new Position(0, 0);
 		
 		// above - "Acima"
@@ -63,7 +62,7 @@ public class Rook extends ChessPiece{
 			mat[p.getRow()][p.getColumn()] = true;
 		}		
 		
-		//////////////
+		///////////
 		return mat;
 	}
 
