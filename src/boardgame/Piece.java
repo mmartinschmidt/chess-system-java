@@ -1,5 +1,7 @@
 package boardgame;
 
+import chess.ChessPosition;
+
 public abstract class Piece {
 
 	protected Position position;
