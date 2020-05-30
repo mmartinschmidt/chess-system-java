@@ -60,11 +60,19 @@ public class UI {
 		System.out.println();
 		//System.out.println("Turn : " + chessMatch.getTurn());
 		System.out.println("Turno : " + chessMatch.getTurn());
-		//System.out.println("Waiting player : " + chessMatch.getCurrentPlayer());
-		System.out.println("Esperando jogador : " + chessMatch.getCurrentPlayer());
-		if (chessMatch.getCheck()) {
-			//System.out.println("CHECK!");
-			System.out.println("XEQUE!");
+		if (!chessMatch.getCheckMate()) {
+			//System.out.println("Waiting player : " + chessMatch.getCurrentPlayer());
+			System.out.println("Esperando jogador : " + chessMatch.getCurrentPlayer());
+			if (chessMatch.getCheck()) {
+				//System.out.println("CHECK!");
+				System.out.println("XEQUE!");
+			}
+		}
+		else {
+			//System.out.println("CHECKMATE!");
+			//System.out.println("Winner: " + chessMatch.getCurrentPlayer());
+			System.out.println("XEQUE MATE!");
+			System.out.println("Vencedor: " + chessMatch.getCurrentPlayer());
 		}
 	}
 	
@@ -117,13 +125,13 @@ public class UI {
 		System.out.println("Pecas capturadas:");
 		
 		//System.out.print("White: ");
-		System.out.print("Brancas:  ");
+		System.out.print("Branca:  ");
 		System.out.print(ANSI_WHITE);
 		System.out.println(Arrays.toString(white.toArray()));
 		System.out.print(ANSI_RESET);
 		
 		//System.out.print("Black: ");
-		System.out.print("Amarelas: ");
+		System.out.print("Amarela: ");
 		System.out.print(ANSI_YELLOW);
 		System.out.println(Arrays.toString(black.toArray()));
 		System.out.print(ANSI_RESET);	
